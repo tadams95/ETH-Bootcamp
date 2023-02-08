@@ -3,10 +3,12 @@
 pragma solidity 0.8.17;
 
 contract ExampleExceptionRequire {
-    mapping(address => uint256) public balanceReceived;
+    mapping(address => uint8) public balanceReceived;
 
     function receiveMoney() public payable {
-        balanceReceived[msg.sender] += msg.value;
+        //Asserts are here to check states of your Smart Contract that should never be violated
+        assert(msg.value == uint8(msg.value));
+        balanceReceived[msg.sender] += uint8(msg.value);
     }
 
     function withdrawMoney(address payable _to, uint256 _amount) public {
@@ -15,7 +17,7 @@ contract ExampleExceptionRequire {
             _amount <= balanceReceived[msg.sender],
             "Not enough funds, aborting!"
         );
-        balanceReceived[msg.sender] -= _amount;
+        balanceReceived[msg.sender] -= uint8(_amount);
         _to.transfer(_amount);
     }
 }
