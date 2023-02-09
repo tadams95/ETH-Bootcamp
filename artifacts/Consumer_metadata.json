@@ -6,21 +6,24 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_contractone",
-						"type": "address"
-					}
-				],
-				"name": "depositOnContractOne",
+				"inputs": [],
+				"name": "deposit",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "receive"
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -36,7 +39,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"ExampleContractCall.sol": "ContractTwo"
+			"SmartContractWallet.sol": "Consumer"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -50,12 +53,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"ExampleContractCall.sol": {
-			"keccak256": "0x78aaa06d0ff36b9c9c360870cbf5f4bb60b9c0deb5a23c9659193db745b36b2b",
+		"SmartContractWallet.sol": {
+			"keccak256": "0x0f033b6d3a8b64a6d277e8f70fa70e09c385ee4eae1bc9428583dfe4cc997183",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://490f826f26efd5fb1869c9f6c1325bfbb94e6850650cfe23f58cd1c9a1bb31eb",
-				"dweb:/ipfs/QmTdMBBVWvbzdmg93vo84HLQREimCaBAS4c2vSTDvdCdFa"
+				"bzz-raw://b3cf51e94e5c083a97e3aecc85dce2aa1e022ba13a5288df9e06ed78738e0a5a",
+				"dweb:/ipfs/QmdZjen8h98tmfg5FYnRx1Vxbs7ww5BUvAFYVqNsvknoS6"
 			]
 		}
 	},
