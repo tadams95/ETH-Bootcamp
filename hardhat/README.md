@@ -1,6 +1,6 @@
 # NFT Project
 
-In this project we create and deploy an NFT the HardHat framework.
+In this project we create and deploy an NFT using the HardHat framework.
 
 In this case, we write unit tests and deploy the contracts using the Framework's scripting functionality.
 
